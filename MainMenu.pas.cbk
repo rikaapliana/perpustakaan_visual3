@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus;
+  Dialogs, Menus, StdCtrls;
 
 type
   TForm2 = class(TForm)
@@ -18,6 +18,8 @@ type
     InputanDenda2: TMenuItem;
     L1: TMenuItem;
     Close1: TMenuItem;
+    lbl1: TLabel;
+    lbl2: TLabel;
   private
     { Private declarations }
   public

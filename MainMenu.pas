@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus;
+  Dialogs, Menus, StdCtrls, Uanggota;
 
 type
   TForm2 = class(TForm)
@@ -18,6 +18,9 @@ type
     InputanDenda2: TMenuItem;
     L1: TMenuItem;
     Close1: TMenuItem;
+    lbl1: TLabel;
+    lbl2: TLabel;
+    procedure D1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,5 +33,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm2.D1Click(Sender: TObject);
+begin
+Form3.ShowModal;
+end;
 
 end.

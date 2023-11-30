@@ -1,5 +1,5 @@
 object Form1: TForm1
-  Left = 386
+  Left = 563
   Top = 152
   Width = 307
   Height = 428
@@ -23,19 +23,19 @@ object Form1: TForm1
   end
   object Shape2: TShape
     Left = 0
-    Top = 84
+    Top = 100
     Width = 273
     Height = 65
   end
   object Shape3: TShape
     Left = 0
-    Top = 172
+    Top = 188
     Width = 273
     Height = 65
   end
   object lbl1: TLabel
     Left = 24
-    Top = 92
+    Top = 108
     Width = 99
     Height = 20
     Caption = 'USERNAME '
@@ -47,8 +47,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl2: TLabel
-    Left = 32
-    Top = 180
+    Left = 24
+    Top = 196
     Width = 92
     Height = 20
     Caption = 'PASSWORD'
@@ -61,7 +61,7 @@ object Form1: TForm1
   end
   object Label1: TLabel
     Left = 16
-    Top = 12
+    Top = 20
     Width = 242
     Height = 40
     Caption = '       SELAMAT DATANG '#13#10'DI APLIKASI PERPUSTAKAAN'
@@ -76,21 +76,21 @@ object Form1: TForm1
   end
   object edt1: TEdit
     Left = 24
-    Top = 116
+    Top = 132
     Width = 193
     Height = 21
     TabOrder = 0
   end
   object edt2: TEdit
-    Left = 32
-    Top = 204
+    Left = 24
+    Top = 220
     Width = 193
     Height = 21
     TabOrder = 1
   end
   object btnb1: TButton
     Left = 192
-    Top = 260
+    Top = 284
     Width = 75
     Height = 25
     Caption = 'LOGIN'
@@ -103,8 +103,8 @@ object Form1: TForm1
     SQL.Strings = (
       'select * from user')
     Params = <>
-    Left = 200
-    Top = 304
+    Left = 224
+    Top = 344
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -119,7 +119,7 @@ object Form1: TForm1
     LibraryLocation = 
       'C:\Users\rikaa\OneDrive\Documents\Academic Rika\5. Visual 3\perp' +
       'ustakaan_visual3\libmysql.dll'
-    Left = 168
-    Top = 304
+    Left = 184
+    Top = 344
   end
 end

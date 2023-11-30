@@ -1,4 +1,4 @@
-unit Uanggota;
+unit Upetugas;
 
 interface
 
@@ -8,13 +8,14 @@ uses
   ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids;
 
 type
-  TForm3 = class(TForm)
+  TForm4 = class(TForm)
     lbl1: TLabel;
     lbl2: TLabel;
     lbl3: TLabel;
     lbl4: TLabel;
     lbl6: TLabel;
     lbl5: TLabel;
+    lbl7: TLabel;
     dbgrd1: TDBGrid;
     btn1: TButton;
     btn2: TButton;
@@ -30,20 +31,19 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
-    lbl7: TLabel;
-    intgrfldzqry1id_anggota: TIntegerField;
-    strngfldzqry1kode_anggota: TStringField;
+    intgrfldzqry1id_petugas: TIntegerField;
+    strngfldzqry1kode_petugas: TStringField;
     strngfldzqry1nama: TStringField;
     strngfldzqry1jk: TStringField;
-    strngfldzqry1kelas: TStringField;
+    strngfldzqry1jabatan: TStringField;
     strngfldzqry1alamat: TStringField;
     strngfldzqry1no_telp: TStringField;
     procedure bersih;
     procedure posisiawal;
     procedure enable;
     procedure FormShow(Sender: TObject);
-    procedure btn2Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
@@ -55,14 +55,14 @@ type
   end;
 
 var
-  Form3: TForm3;
+  Form4: TForm4;
   id:string;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm3.bersih;
+procedure TForm4.bersih;
 begin
 edt1.Clear;
 edt2.Clear;
@@ -71,7 +71,17 @@ edt4.Clear;
 edt5.Clear;
 end;
 
-procedure TForm3.posisiawal;
+procedure TForm4.enable;
+begin
+edt1.Enabled:= True;
+edt2.Enabled:= True;
+Cbjk.Enabled:= True;
+edt3.Enabled:= True;
+edt4.Enabled:= True;
+edt5.Enabled:= True;
+end;
+
+procedure TForm4.posisiawal;
 begin
 bersih;
 btn1.Enabled:= True;
@@ -88,48 +98,12 @@ edt4.Enabled:= False;
 edt5.Enabled:= False;
 end;
 
-procedure TForm3.FormShow(Sender: TObject);
+procedure TForm4.FormShow(Sender: TObject);
 begin
 posisiawal;
 end;
 
-procedure TForm3.btn2Click(Sender: TObject);
-begin
-if (edt1.Text='') or (edt2.Text='') or (edt3.Text='') or (edt4.Text='') or (edt5.Text='') then
-  begin
-    ShowMessage('DATA TIDAK BOLEH KOSONG!');
-  end else
-  if (zqry1.Locate('kode_anggota', edt1.Text,[])) and (zqry1.Locate('nama', edt2.Text,[]))  then
-  begin
-    ShowMessage('DATA SISWA SUDAH DIGUNAKAN!');
-    posisiawal;
-  end else
-  begin
-  zqry1.SQL.Clear; //simpan
-  zqry1.SQL.Add('insert into anggota values(null,"'+edt1.Text+'","'+edt2.Text+'","'+Cbjk.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'")');
-  zqry1.ExecSQL;
-
-  zqry1.SQL.Clear;
-  zqry1.SQL.Add('select * from anggota');
-  zqry1.Open;
-  ShowMessage('DATA BERHASIL DISIMPAN!');
-  posisiawal;
-
-  end;
-
-end;
-
-procedure TForm3.enable;
-begin
-edt1.Enabled:= True;
-edt2.Enabled:= True;
-Cbjk.Enabled:= True;
-edt3.Enabled:= True;
-edt4.Enabled:= True;
-edt5.Enabled:= True;
-end;
-
-procedure TForm3.btn1Click(Sender: TObject);
+procedure TForm4.btn1Click(Sender: TObject);
 begin
 enable;
 bersih;
@@ -140,9 +114,34 @@ btn4.Enabled:= False;
 btn5.Enabled:= True;
 end;
 
-procedure TForm3.btn3Click(Sender: TObject);
+procedure TForm4.btn2Click(Sender: TObject);
 begin
-   if (edt1.Text='') or (edt2.Text='') or (edt3.Text='') or (edt4.Text='') or (edt5.Text='') then
+if (edt1.Text='') or (edt2.Text='') or (edt3.Text='') or (edt4.Text='') or (edt5.Text='') then
+  begin
+    ShowMessage('DATA TIDAK BOLEH KOSONG!');
+  end else
+  if (zqry1.Locate('kode_petugas', edt1.Text,[])) and (zqry1.Locate('nama', edt2.Text,[]))  then
+  begin
+    ShowMessage('DATA SISWA SUDAH DIGUNAKAN!');
+    posisiawal;
+  end else
+  begin
+  zqry1.SQL.Clear; //simpan
+  zqry1.SQL.Add('insert into petugas values(null,"'+edt1.Text+'","'+edt2.Text+'","'+Cbjk.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'")');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from petugas');
+  zqry1.Open;
+  ShowMessage('DATA BERHASIL DISIMPAN!');
+  posisiawal;
+
+  end;
+end;
+
+procedure TForm4.btn3Click(Sender: TObject);
+begin
+if (edt1.Text='') or (edt2.Text='') or (edt3.Text='') or (edt4.Text='') or (edt5.Text='') then
   begin
     ShowMessage('DATA TIDAK BOLEH KOSONG!');
   end else
@@ -154,26 +153,25 @@ begin
   begin
   ShowMessage('DATA BERHASIL DI UPDATE!');
   zqry1.SQL.Clear;
-  zqry1.SQL.Add('Update anggota set kode_anggota="'+edt1.Text+'",nama="'+edt2.Text+'",jk="'+Cbjk.Text+'",kelas="'+edt3.Text+'",alamat="'+edt4.Text+'",no_telp="'+edt5.Text+'" where id_anggota ="'+id+'"');
+  zqry1.SQL.Add('Update petugas set kode_petugas="'+edt1.Text+'",nama="'+edt2.Text+'",jk="'+Cbjk.Text+'",jabatan="'+edt3.Text+'",alamat="'+edt4.Text+'",no_telp="'+edt5.Text+'" where id_petugas ="'+id+'"');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;
-  zqry1.SQL.Add('select * from anggota');
+  zqry1.SQL.Add('select * from petugas');
   zqry1.Open;
    posisiawal;
   end;
-
 end;
 
-procedure TForm3.btn4Click(Sender: TObject);
+procedure TForm4.btn4Click(Sender: TObject);
 begin
 if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add('delete from anggota where id_anggota="'+id+'"');
+zqry1.SQL.Add('delete from petugas where id_petugas="'+id+'"');
 zqry1.ExecSQL;
 zqry1.SQL.Clear;
-zqry1.SQL.Add('select * from anggota');
+zqry1.SQL.Add('select * from petugas');
 zqry1.Open;
 ShowMessage('DATA BERHASIL DIHAPUS');
 posisiawal;
@@ -182,15 +180,14 @@ begin
  ShowMessage('DATA BATAL DIHAPUS');
  posisiawal;
 end
-
 end;
 
-procedure TForm3.btn5Click(Sender: TObject);
+procedure TForm4.btn5Click(Sender: TObject);
 begin
 posisiawal;
 end;
 
-procedure TForm3.dbgrd1CellClick(Column: TColumn);
+procedure TForm4.dbgrd1CellClick(Column: TColumn);
 begin
 enable;
 

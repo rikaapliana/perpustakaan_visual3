@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus, StdCtrls, Uanggota;
+  Dialogs, Menus, StdCtrls, Uanggota, Upetugas;
 
 type
   TForm2 = class(TForm)
@@ -21,6 +21,7 @@ type
     lbl1: TLabel;
     lbl2: TLabel;
     procedure D1Click(Sender: TObject);
+    procedure InputanPetugas1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,6 +38,11 @@ implementation
 procedure TForm2.D1Click(Sender: TObject);
 begin
 Form3.ShowModal;
+end;
+
+procedure TForm2.InputanPetugas1Click(Sender: TObject);
+begin
+Form4.ShowModal;
 end;
 
 end.

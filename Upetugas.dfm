@@ -1,11 +1,10 @@
-object Form3: TForm3
-  Left = 345
-  Top = 186
+object Form4: TForm4
+  Left = 344
+  Top = 169
   Width = 850
-  Height = 444
-  VertScrollBar.Position = 76
-  Caption = 'Inputan Anggota'
-  Color = clTeal
+  Height = 480
+  Caption = 'Inputan Petugas'
+  Color = clGray
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -17,10 +16,10 @@ object Form3: TForm3
   TextHeight = 13
   object lbl1: TLabel
     Left = 32
-    Top = 28
-    Width = 99
+    Top = 104
+    Width = 95
     Height = 15
-    Caption = 'KODE ANGGOTA'
+    Caption = 'KODE PETUGAS'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -30,7 +29,7 @@ object Form3: TForm3
   end
   object lbl2: TLabel
     Left = 32
-    Top = 68
+    Top = 144
     Width = 38
     Height = 15
     Caption = 'NAMA'
@@ -43,7 +42,7 @@ object Form3: TForm3
   end
   object lbl3: TLabel
     Left = 32
-    Top = 108
+    Top = 184
     Width = 95
     Height = 15
     Caption = 'JENIS KELAMIN'
@@ -56,10 +55,10 @@ object Form3: TForm3
   end
   object lbl4: TLabel
     Left = 32
-    Top = 148
-    Width = 41
+    Top = 224
+    Width = 58
     Height = 15
-    Caption = 'KELAS'
+    Caption = 'JABATAN'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -69,7 +68,7 @@ object Form3: TForm3
   end
   object lbl6: TLabel
     Left = 32
-    Top = 228
+    Top = 304
     Width = 82
     Height = 15
     Caption = 'NO. TELEPON'
@@ -82,7 +81,7 @@ object Form3: TForm3
   end
   object lbl5: TLabel
     Left = 32
-    Top = 188
+    Top = 264
     Width = 53
     Height = 15
     Caption = 'ALAMAT'
@@ -95,11 +94,11 @@ object Form3: TForm3
   end
   object lbl7: TLabel
     Left = 256
-    Top = -36
+    Top = 40
     Width = 287
     Height = 38
-    Caption = 'SISTEM INFORMASI PERPUSTAKAAN'#13#10'               INPUTAN ANGGOTA'
-    Color = clTeal
+    Caption = 'SISTEM INFORMASI PERPUSTAKAAN'#13#10'               INPUTAN PETUGAS'
+    Color = clGray
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -16
@@ -110,7 +109,7 @@ object Form3: TForm3
   end
   object dbgrd1: TDBGrid
     Left = 32
-    Top = 276
+    Top = 360
     Width = 641
     Height = 129
     DataSource = ds1
@@ -121,51 +120,10 @@ object Form3: TForm3
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'id_anggota'
-        Width = 28
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'kode_anggota'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'nama'
-        Width = 120
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'jk'
-        Width = 30
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'kelas'
-        Width = 50
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'alamat'
-        Width = 130
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'no_telp'
-        Visible = True
-      end>
   end
   object btn1: TButton
     Left = 528
-    Top = 28
+    Top = 104
     Width = 129
     Height = 31
     Caption = 'Baru'
@@ -180,7 +138,7 @@ object Form3: TForm3
   end
   object btn2: TButton
     Left = 528
-    Top = 76
+    Top = 152
     Width = 129
     Height = 31
     Caption = 'Simpan'
@@ -195,7 +153,7 @@ object Form3: TForm3
   end
   object btn3: TButton
     Left = 528
-    Top = 124
+    Top = 200
     Width = 129
     Height = 31
     Caption = 'Edit'
@@ -210,7 +168,7 @@ object Form3: TForm3
   end
   object btn4: TButton
     Left = 528
-    Top = 172
+    Top = 248
     Width = 129
     Height = 31
     Caption = 'Hapus'
@@ -225,7 +183,7 @@ object Form3: TForm3
   end
   object btn5: TButton
     Left = 528
-    Top = 220
+    Top = 296
     Width = 129
     Height = 31
     Caption = 'Batal'
@@ -240,7 +198,7 @@ object Form3: TForm3
   end
   object edt1: TEdit
     Left = 192
-    Top = 28
+    Top = 104
     Width = 233
     Height = 26
     Font.Charset = DEFAULT_CHARSET
@@ -253,7 +211,7 @@ object Form3: TForm3
   end
   object edt2: TEdit
     Left = 192
-    Top = 68
+    Top = 144
     Width = 233
     Height = 26
     Font.Charset = DEFAULT_CHARSET
@@ -266,7 +224,7 @@ object Form3: TForm3
   end
   object edt3: TEdit
     Left = 192
-    Top = 148
+    Top = 224
     Width = 233
     Height = 26
     Font.Charset = DEFAULT_CHARSET
@@ -279,7 +237,7 @@ object Form3: TForm3
   end
   object edt4: TEdit
     Left = 192
-    Top = 188
+    Top = 264
     Width = 233
     Height = 26
     Font.Charset = DEFAULT_CHARSET
@@ -292,7 +250,7 @@ object Form3: TForm3
   end
   object edt5: TEdit
     Left = 192
-    Top = 228
+    Top = 304
     Width = 233
     Height = 26
     Font.Charset = DEFAULT_CHARSET
@@ -305,7 +263,7 @@ object Form3: TForm3
   end
   object Cbjk: TComboBox
     Left = 192
-    Top = 108
+    Top = 184
     Width = 233
     Height = 21
     ItemHeight = 13
@@ -335,30 +293,37 @@ object Form3: TForm3
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select * from anggota')
+      'select * from petugas')
     Params = <>
     Left = 112
     Top = 435
-    object intgrfldzqry1id_anggota: TIntegerField
-      FieldName = 'id_anggota'
+    object intgrfldzqry1id_petugas: TIntegerField
+      DisplayWidth = 5
+      FieldName = 'id_petugas'
       Required = True
     end
-    object strngfldzqry1kode_anggota: TStringField
-      FieldName = 'kode_anggota'
+    object strngfldzqry1kode_petugas: TStringField
+      DisplayWidth = 10
+      FieldName = 'kode_petugas'
       Size = 10
     end
     object strngfldzqry1nama: TStringField
+      DisplayWidth = 20
       FieldName = 'nama'
       Size = 25
     end
     object strngfldzqry1jk: TStringField
+      DisplayWidth = 5
       FieldName = 'jk'
       Size = 1
     end
-    object strngfldzqry1kelas: TStringField
-      FieldName = 'kelas'
+    object strngfldzqry1jabatan: TStringField
+      DisplayWidth = 18
+      FieldName = 'jabatan'
+      Size = 25
     end
     object strngfldzqry1alamat: TStringField
+      DisplayWidth = 20
       FieldName = 'alamat'
       Size = 25
     end

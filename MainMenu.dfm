@@ -51,6 +51,7 @@ object Form2: TForm2
       end
       object InputanPetugas1: TMenuItem
         Caption = 'Inputan  Petugas'
+        OnClick = InputanPetugas1Click
       end
       object InputanPeminjaman1: TMenuItem
         Caption = 'Inputan Buku'

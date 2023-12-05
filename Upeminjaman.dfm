@@ -1,9 +1,8 @@
 object Form6: TForm6
-  Left = 368
-  Top = 151
-  Width = 928
-  Height = 480
-  VertScrollBar.Position = 55
+  Left = 302
+  Top = 135
+  Width = 850
+  Height = 588
   Caption = 'Inputan Peminjaman'
   Color = clOlive
   Font.Charset = DEFAULT_CHARSET
@@ -12,11 +11,12 @@ object Form6: TForm6
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
     Left = 32
-    Top = 73
+    Top = 128
     Width = 110
     Height = 15
     Caption = 'TANGGAL PINJAM'
@@ -29,7 +29,7 @@ object Form6: TForm6
   end
   object lbl2: TLabel
     Left = 32
-    Top = 113
+    Top = 168
     Width = 180
     Height = 15
     Caption = 'TENGGAT TANGGAL KEMBALI'
@@ -42,7 +42,7 @@ object Form6: TForm6
   end
   object lbl3: TLabel
     Left = 32
-    Top = 153
+    Top = 208
     Width = 50
     Height = 15
     Caption = 'ID BUKU'
@@ -55,7 +55,7 @@ object Form6: TForm6
   end
   object lbl4: TLabel
     Left = 32
-    Top = 193
+    Top = 248
     Width = 77
     Height = 15
     Caption = 'ID ANGGOTA'
@@ -68,7 +68,7 @@ object Form6: TForm6
   end
   object lbl5: TLabel
     Left = 32
-    Top = 233
+    Top = 288
     Width = 73
     Height = 15
     Caption = 'ID PETUGAS'
@@ -81,7 +81,7 @@ object Form6: TForm6
   end
   object lbl7: TLabel
     Left = 256
-    Top = -23
+    Top = 32
     Width = 287
     Height = 38
     Caption = 'SISTEM INFORMASI PERPUSTAKAAN'#13#10'             INPUTAN PEMINJAMAN'
@@ -96,7 +96,7 @@ object Form6: TForm6
   end
   object dtp1: TDateTimePicker
     Left = 248
-    Top = 65
+    Top = 120
     Width = 177
     Height = 21
     Date = 45112.066510115740000000
@@ -105,31 +105,52 @@ object Form6: TForm6
   end
   object Cb1: TComboBox
     Left = 248
-    Top = 153
+    Top = 208
     Width = 177
     Height = 21
     ItemHeight = 13
     TabOrder = 1
+    Text = 'pilih---'
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5')
   end
   object Cb2: TComboBox
     Left = 248
-    Top = 193
+    Top = 248
     Width = 177
     Height = 21
     ItemHeight = 13
     TabOrder = 2
+    Text = 'pilih---'
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5')
   end
   object Cb3: TComboBox
     Left = 248
-    Top = 233
+    Top = 288
     Width = 177
     Height = 21
     ItemHeight = 13
     TabOrder = 3
+    Text = 'pilih---'
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5')
   end
   object dbgrd1: TDBGrid
     Left = 24
-    Top = 304
+    Top = 359
     Width = 641
     Height = 137
     DataSource = ds1
@@ -139,10 +160,11 @@ object Form6: TForm6
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object btn1: TButton
     Left = 520
-    Top = 57
+    Top = 112
     Width = 129
     Height = 31
     Caption = 'Baru'
@@ -153,10 +175,11 @@ object Form6: TForm6
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 520
-    Top = 105
+    Top = 160
     Width = 129
     Height = 31
     Caption = 'Simpan'
@@ -167,10 +190,11 @@ object Form6: TForm6
     Font.Style = []
     ParentFont = False
     TabOrder = 6
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 520
-    Top = 153
+    Top = 208
     Width = 129
     Height = 31
     Caption = 'Edit'
@@ -181,10 +205,11 @@ object Form6: TForm6
     Font.Style = []
     ParentFont = False
     TabOrder = 7
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 520
-    Top = 201
+    Top = 256
     Width = 129
     Height = 31
     Caption = 'Hapus'
@@ -195,10 +220,11 @@ object Form6: TForm6
     Font.Style = []
     ParentFont = False
     TabOrder = 8
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 520
-    Top = 249
+    Top = 304
     Width = 129
     Height = 31
     Caption = 'Batal'
@@ -209,10 +235,11 @@ object Form6: TForm6
     Font.Style = []
     ParentFont = False
     TabOrder = 9
+    OnClick = btn5Click
   end
   object dtp2: TDateTimePicker
     Left = 248
-    Top = 105
+    Top = 160
     Width = 177
     Height = 21
     Date = 45112.066510115740000000

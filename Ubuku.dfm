@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 368
-  Top = 177
+  Left = 332
+  Top = 148
   Width = 850
   Height = 559
   Caption = 'Inputan Buku'

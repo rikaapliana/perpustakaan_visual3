@@ -59,9 +59,11 @@ object Form2: TForm2
       end
       object D4: TMenuItem
         Caption = 'Inputan Peminjaman'
+        OnClick = D4Click
       end
       object D5: TMenuItem
         Caption = 'Inputan Pengembalian'
+        OnClick = D5Click
       end
       object D6: TMenuItem
         Caption = 'Inputan Denda'

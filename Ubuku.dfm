@@ -1,7 +1,7 @@
 object Form5: TForm5
-  Left = 337
-  Top = 163
-  Width = 928
+  Left = 368
+  Top = 177
+  Width = 850
   Height = 559
   Caption = 'Inputan Buku'
   Color = clMaroon
@@ -11,6 +11,7 @@ object Form5: TForm5
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -96,7 +97,7 @@ object Form5: TForm5
     Top = 40
     Width = 287
     Height = 38
-    Caption = 'SISTEM INFORMASI PERPUSTAKAAN'#13#10'               INPUTAN BUKU'
+    Caption = 'SISTEM INFORMASI PERPUSTAKAAN'#13#10'                     INPUTAN BUKU'
     Color = clMaroon
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
@@ -118,6 +119,7 @@ object Form5: TForm5
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object btn1: TButton
     Left = 528
@@ -132,6 +134,7 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 528
@@ -146,6 +149,7 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 528
@@ -160,6 +164,7 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 528
@@ -174,6 +179,7 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
     TabOrder = 4
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 528
@@ -188,6 +194,7 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    OnClick = btn5Click
   end
   object edt1: TEdit
     Left = 192
@@ -260,7 +267,6 @@ object Form5: TForm5
     Width = 233
     Height = 21
     TabOrder = 11
-    Text = 'edt6'
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

@@ -4,24 +4,24 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus, StdCtrls, Uanggota, Upetugas;
+  Dialogs, Menus, StdCtrls, Uanggota, Upetugas, Ubuku;
 
 type
   TForm2 = class(TForm)
     mm1: TMainMenu;
     Menu1: TMenuItem;
     D1: TMenuItem;
-    InputanPetugas1: TMenuItem;
-    InputanPeminjaman1: TMenuItem;
-    InputanPenfembalian1: TMenuItem;
-    InputanDenda1: TMenuItem;
-    InputanDenda2: TMenuItem;
-    L1: TMenuItem;
+    D2: TMenuItem;
+    D3: TMenuItem;
+    D4: TMenuItem;
+    D5: TMenuItem;
+    D6: TMenuItem;
     Close1: TMenuItem;
     lbl1: TLabel;
     lbl2: TLabel;
     procedure D1Click(Sender: TObject);
-    procedure InputanPetugas1Click(Sender: TObject);
+    procedure D2Click(Sender: TObject);
+    procedure D3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,9 +40,14 @@ begin
 Form3.ShowModal;
 end;
 
-procedure TForm2.InputanPetugas1Click(Sender: TObject);
+procedure TForm2.D2Click(Sender: TObject);
 begin
 Form4.ShowModal;
+end;
+
+procedure TForm2.D3Click(Sender: TObject);
+begin
+Form5.ShowModal;
 end;
 
 end.

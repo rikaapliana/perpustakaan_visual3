@@ -49,25 +49,23 @@ object Form2: TForm2
         Caption = 'Inputan Anggota'
         OnClick = D1Click
       end
-      object InputanPetugas1: TMenuItem
+      object D2: TMenuItem
         Caption = 'Inputan  Petugas'
-        OnClick = InputanPetugas1Click
+        OnClick = D2Click
       end
-      object InputanPeminjaman1: TMenuItem
+      object D3: TMenuItem
         Caption = 'Inputan Buku'
+        OnClick = D3Click
       end
-      object InputanPenfembalian1: TMenuItem
+      object D4: TMenuItem
         Caption = 'Inputan Peminjaman'
       end
-      object InputanDenda1: TMenuItem
+      object D5: TMenuItem
         Caption = 'Inputan Pengembalian'
       end
-      object InputanDenda2: TMenuItem
+      object D6: TMenuItem
         Caption = 'Inputan Denda'
       end
-    end
-    object L1: TMenuItem
-      Caption = 'Laporan'
     end
     object Close1: TMenuItem
       Caption = 'Close'

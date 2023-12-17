@@ -109,7 +109,7 @@ object Form4: TForm4
   end
   object dbgrd1: TDBGrid
     Left = 32
-    Top = 360
+    Top = 408
     Width = 641
     Height = 129
     DataSource = ds1
@@ -122,9 +122,9 @@ object Form4: TForm4
     OnCellClick = dbgrd1CellClick
   end
   object btn1: TButton
-    Left = 528
-    Top = 104
-    Width = 129
+    Left = 32
+    Top = 360
+    Width = 97
     Height = 31
     Caption = 'Baru'
     Font.Charset = ANSI_CHARSET
@@ -137,9 +137,9 @@ object Form4: TForm4
     OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 528
-    Top = 152
-    Width = 129
+    Left = 144
+    Top = 360
+    Width = 97
     Height = 31
     Caption = 'Simpan'
     Font.Charset = ANSI_CHARSET
@@ -152,9 +152,9 @@ object Form4: TForm4
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 528
-    Top = 200
-    Width = 129
+    Left = 256
+    Top = 360
+    Width = 97
     Height = 31
     Caption = 'Edit'
     Font.Charset = ANSI_CHARSET
@@ -167,9 +167,9 @@ object Form4: TForm4
     OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 528
-    Top = 248
-    Width = 129
+    Left = 368
+    Top = 360
+    Width = 97
     Height = 31
     Caption = 'Hapus'
     Font.Charset = ANSI_CHARSET
@@ -182,9 +182,9 @@ object Form4: TForm4
     OnClick = btn4Click
   end
   object btn5: TButton
-    Left = 528
-    Top = 296
-    Width = 129
+    Left = 480
+    Top = 360
+    Width = 97
     Height = 31
     Caption = 'Batal'
     Font.Charset = ANSI_CHARSET
@@ -199,7 +199,7 @@ object Form4: TForm4
   object edt1: TEdit
     Left = 192
     Top = 104
-    Width = 233
+    Width = 377
     Height = 26
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -212,7 +212,7 @@ object Form4: TForm4
   object edt2: TEdit
     Left = 192
     Top = 144
-    Width = 233
+    Width = 377
     Height = 26
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -225,7 +225,7 @@ object Form4: TForm4
   object edt3: TEdit
     Left = 192
     Top = 224
-    Width = 233
+    Width = 377
     Height = 26
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -238,7 +238,7 @@ object Form4: TForm4
   object edt4: TEdit
     Left = 192
     Top = 264
-    Width = 233
+    Width = 377
     Height = 26
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -251,7 +251,7 @@ object Form4: TForm4
   object edt5: TEdit
     Left = 192
     Top = 304
-    Width = 233
+    Width = 377
     Height = 26
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -272,6 +272,21 @@ object Form4: TForm4
     Items.Strings = (
       'L'
       'P')
+  end
+  object btn6: TButton
+    Left = 592
+    Top = 360
+    Width = 81
+    Height = 29
+    Caption = 'CETAK'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 12
+    OnClick = btn6Click
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -336,5 +351,399 @@ object Form4: TForm4
     DataSet = zqry1
     Left = 152
     Top = 435
+  end
+  object frxpetugas: TfrxReport
+    Version = '4.0.11'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45103.402012476900000000
+    ReportOptions.LastChange = 45277.850243645840000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 661
+    Top = 160
+    Datasets = <
+      item
+        DataSet = frxdbpetugas
+        DataSetName = 'frxdbpetugas'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      Orientation = poLandscape
+      PaperWidth = 279.400000000000000000
+      PaperHeight = 215.900000000000000000
+      PaperSize = 1
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      object ReportTitle1: TfrxReportTitle
+        Height = 45.354360000000000000
+        Top = 18.897650000000000000
+        Width = 980.410082000000000000
+        object Memo1: TfrxMemoView
+          Left = 347.716760000000000000
+          Top = 11.338590000000000000
+          Width = 313.700990000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -20
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'LAPORAN DATA PETUGAS')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object PageHeader1: TfrxPageHeader
+        Height = 45.354360000000000000
+        Top = 86.929190000000000000
+        Width = 980.410082000000000000
+        object Memo2: TfrxMemoView
+          Left = 94.488250000000000000
+          Top = 7.559060000000000000
+          Width = 45.354360000000000000
+          Height = 37.795275590000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'NO')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo3: TfrxMemoView
+          Left = 139.842610000000000000
+          Top = 7.559060000000000000
+          Width = 71.811070000000000000
+          Height = 37.795275590000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'KODE ')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo4: TfrxMemoView
+          Left = 211.653680000000000000
+          Top = 7.559060000000000000
+          Width = 200.315090000000000000
+          Height = 37.795275590000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'NAMA')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo5: TfrxMemoView
+          Left = 411.968770000000000000
+          Top = 7.559060000000000000
+          Width = 45.354360000000000000
+          Height = 37.795275590000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'JK')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo6: TfrxMemoView
+          Left = 457.323130000000000000
+          Top = 7.559060000000000000
+          Width = 117.165430000000000000
+          Height = 37.795275590000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'JABATAN')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo18: TfrxMemoView
+          Left = 574.488560000000000000
+          Top = 7.559060000000000000
+          Width = 192.756030000000000000
+          Height = 37.795275590000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'ALAMAT')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo7: TfrxMemoView
+          Left = 767.244590000000000000
+          Top = 7.559060000000000000
+          Width = 117.165430000000000000
+          Height = 37.795275590000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'NO. TELEPON')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object MasterData1: TfrxMasterData
+        Height = 37.795275590000000000
+        Top = 192.756030000000000000
+        Width = 980.410082000000000000
+        DataSet = frxdbpetugas
+        DataSetName = 'frxdbpetugas'
+        RowCount = 0
+        object Memo10: TfrxMemoView
+          Left = 94.488250000000000000
+          Width = 45.354360000000000000
+          Height = 37.795275590000000000
+          DataSet = frxdbpetugas
+          DataSetName = 'frxdbpetugas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[line]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo11: TfrxMemoView
+          Left = 139.842610000000000000
+          Width = 71.811070000000000000
+          Height = 37.795275590000000000
+          DataField = 'kode_petugas'
+          DataSet = frxdbpetugas
+          DataSetName = 'frxdbpetugas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdbpetugas."kode_petugas"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo12: TfrxMemoView
+          Left = 211.653680000000000000
+          Width = 200.315090000000000000
+          Height = 37.795275590000000000
+          DataField = 'nama'
+          DataSet = frxdbpetugas
+          DataSetName = 'frxdbpetugas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haBlock
+          Memo.UTF8 = (
+            '[frxdbpetugas."nama"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo13: TfrxMemoView
+          Left = 411.968770000000000000
+          Width = 45.354360000000000000
+          Height = 37.795275590000000000
+          DataField = 'jk'
+          DataSet = frxdbpetugas
+          DataSetName = 'frxdbpetugas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdbpetugas."jk"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo14: TfrxMemoView
+          Left = 457.323130000000000000
+          Width = 117.165430000000000000
+          Height = 37.795275590000000000
+          DataField = 'jabatan'
+          DataSet = frxdbpetugas
+          DataSetName = 'frxdbpetugas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdbpetugas."jabatan"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo17: TfrxMemoView
+          Left = 574.488560000000000000
+          Width = 192.756030000000000000
+          Height = 37.795275590000000000
+          DataField = 'alamat'
+          DataSet = frxdbpetugas
+          DataSetName = 'frxdbpetugas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haBlock
+          Memo.UTF8 = (
+            '[frxdbpetugas."alamat"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo19: TfrxMemoView
+          Left = 767.244590000000000000
+          Width = 117.165430000000000000
+          Height = 37.795275590000000000
+          DataField = 'no_telp'
+          DataSet = frxdbpetugas
+          DataSetName = 'frxdbpetugas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haBlock
+          Memo.UTF8 = (
+            '[frxdbpetugas."no_telp"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object Footer1: TfrxFooter
+        Height = 45.354360000000000000
+        Top = 253.228510000000000000
+        Width = 980.410082000000000000
+        object Memo20: TfrxMemoView
+          Left = 718.110700000000000000
+          Top = 18.897650000000000000
+          Width = 158.740260000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'Jumlah Data Petugas :')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo21: TfrxMemoView
+          Left = 876.850960000000000000
+          Top = 18.897650000000000000
+          Width = 45.354360000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[COUNT(MasterData1)]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+    end
+  end
+  object frxdbpetugas: TfrxDBDataset
+    UserName = 'frxdbpetugas'
+    CloseDataSource = False
+    DataSet = zqry1
+    Left = 661
+    Top = 108
   end
 end

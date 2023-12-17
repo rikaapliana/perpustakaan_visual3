@@ -1,9 +1,9 @@
 object Form3: TForm3
-  Left = 345
-  Top = 186
+  Left = 305
+  Top = 143
   Width = 850
   Height = 444
-  VertScrollBar.Position = 76
+  VertScrollBar.Position = 132
   Caption = 'Inputan Anggota'
   Color = clTeal
   Font.Charset = DEFAULT_CHARSET
@@ -17,7 +17,7 @@ object Form3: TForm3
   TextHeight = 13
   object lbl1: TLabel
     Left = 32
-    Top = 28
+    Top = -28
     Width = 99
     Height = 15
     Caption = 'KODE ANGGOTA'
@@ -30,7 +30,7 @@ object Form3: TForm3
   end
   object lbl2: TLabel
     Left = 32
-    Top = 68
+    Top = 12
     Width = 38
     Height = 15
     Caption = 'NAMA'
@@ -43,7 +43,7 @@ object Form3: TForm3
   end
   object lbl3: TLabel
     Left = 32
-    Top = 108
+    Top = 52
     Width = 95
     Height = 15
     Caption = 'JENIS KELAMIN'
@@ -56,7 +56,7 @@ object Form3: TForm3
   end
   object lbl4: TLabel
     Left = 32
-    Top = 148
+    Top = 92
     Width = 41
     Height = 15
     Caption = 'KELAS'
@@ -69,7 +69,7 @@ object Form3: TForm3
   end
   object lbl6: TLabel
     Left = 32
-    Top = 228
+    Top = 172
     Width = 82
     Height = 15
     Caption = 'NO. TELEPON'
@@ -82,7 +82,7 @@ object Form3: TForm3
   end
   object lbl5: TLabel
     Left = 32
-    Top = 188
+    Top = 132
     Width = 53
     Height = 15
     Caption = 'ALAMAT'
@@ -95,7 +95,7 @@ object Form3: TForm3
   end
   object lbl7: TLabel
     Left = 256
-    Top = -36
+    Top = -92
     Width = 287
     Height = 38
     Caption = 'SISTEM INFORMASI PERPUSTAKAAN'#13#10'               INPUTAN ANGGOTA'
@@ -111,7 +111,7 @@ object Form3: TForm3
   object dbgrd1: TDBGrid
     Left = 32
     Top = 276
-    Width = 641
+    Width = 657
     Height = 129
     DataSource = ds1
     TabOrder = 0
@@ -164,9 +164,9 @@ object Form3: TForm3
       end>
   end
   object btn1: TButton
-    Left = 528
-    Top = 28
-    Width = 129
+    Left = 32
+    Top = 228
+    Width = 97
     Height = 31
     Caption = 'Baru'
     Font.Charset = ANSI_CHARSET
@@ -179,9 +179,9 @@ object Form3: TForm3
     OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 528
-    Top = 76
-    Width = 129
+    Left = 144
+    Top = 228
+    Width = 97
     Height = 31
     Caption = 'Simpan'
     Font.Charset = ANSI_CHARSET
@@ -194,9 +194,9 @@ object Form3: TForm3
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 528
-    Top = 124
-    Width = 129
+    Left = 256
+    Top = 228
+    Width = 97
     Height = 31
     Caption = 'Edit'
     Font.Charset = ANSI_CHARSET
@@ -209,9 +209,9 @@ object Form3: TForm3
     OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 528
-    Top = 172
-    Width = 129
+    Left = 368
+    Top = 228
+    Width = 97
     Height = 31
     Caption = 'Hapus'
     Font.Charset = ANSI_CHARSET
@@ -224,9 +224,9 @@ object Form3: TForm3
     OnClick = btn4Click
   end
   object btn5: TButton
-    Left = 528
-    Top = 220
-    Width = 129
+    Left = 480
+    Top = 228
+    Width = 97
     Height = 31
     Caption = 'Batal'
     Font.Charset = ANSI_CHARSET
@@ -240,8 +240,8 @@ object Form3: TForm3
   end
   object edt1: TEdit
     Left = 192
-    Top = 28
-    Width = 233
+    Top = -28
+    Width = 337
     Height = 26
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -253,8 +253,8 @@ object Form3: TForm3
   end
   object edt2: TEdit
     Left = 192
-    Top = 68
-    Width = 233
+    Top = 12
+    Width = 337
     Height = 26
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -266,7 +266,7 @@ object Form3: TForm3
   end
   object edt3: TEdit
     Left = 192
-    Top = 148
+    Top = 92
     Width = 233
     Height = 26
     Font.Charset = DEFAULT_CHARSET
@@ -279,8 +279,8 @@ object Form3: TForm3
   end
   object edt4: TEdit
     Left = 192
-    Top = 188
-    Width = 233
+    Top = 132
+    Width = 337
     Height = 26
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -292,8 +292,8 @@ object Form3: TForm3
   end
   object edt5: TEdit
     Left = 192
-    Top = 228
-    Width = 233
+    Top = 172
+    Width = 337
     Height = 26
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -305,7 +305,7 @@ object Form3: TForm3
   end
   object Cbjk: TComboBox
     Left = 192
-    Top = 108
+    Top = 52
     Width = 233
     Height = 21
     ItemHeight = 13
@@ -314,6 +314,21 @@ object Form3: TForm3
     Items.Strings = (
       'L'
       'P')
+  end
+  object btn6: TButton
+    Left = 592
+    Top = 228
+    Width = 97
+    Height = 29
+    Caption = 'CETAK'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 12
+    OnClick = btn6Click
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -371,5 +386,399 @@ object Form3: TForm3
     DataSet = zqry1
     Left = 152
     Top = 435
+  end
+  object frxanggota: TfrxReport
+    Version = '4.0.11'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45103.402012476900000000
+    ReportOptions.LastChange = 45277.847779363420000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 669
+    Top = 112
+    Datasets = <
+      item
+        DataSet = frxdbanggota
+        DataSetName = 'frxdbanggota'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      Orientation = poLandscape
+      PaperWidth = 279.400000000000000000
+      PaperHeight = 215.900000000000000000
+      PaperSize = 1
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      object ReportTitle1: TfrxReportTitle
+        Height = 45.354360000000000000
+        Top = 18.897650000000000000
+        Width = 980.410082000000000000
+        object Memo1: TfrxMemoView
+          Left = 347.716760000000000000
+          Top = 11.338590000000000000
+          Width = 313.700990000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -20
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'LAPORAN DATA ANGGOTA')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object PageHeader1: TfrxPageHeader
+        Height = 45.354360000000000000
+        Top = 86.929190000000000000
+        Width = 980.410082000000000000
+        object Memo2: TfrxMemoView
+          Left = 94.488250000000000000
+          Top = 7.559060000000000000
+          Width = 45.354360000000000000
+          Height = 37.795275590000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'NO')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo3: TfrxMemoView
+          Left = 139.842610000000000000
+          Top = 7.559060000000000000
+          Width = 71.811070000000000000
+          Height = 37.795275590000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'KODE ')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo4: TfrxMemoView
+          Left = 211.653680000000000000
+          Top = 7.559060000000000000
+          Width = 200.315090000000000000
+          Height = 37.795275590000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'NAMA')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo5: TfrxMemoView
+          Left = 411.968770000000000000
+          Top = 7.559060000000000000
+          Width = 45.354360000000000000
+          Height = 37.795275590000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'JK')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo6: TfrxMemoView
+          Left = 457.323130000000000000
+          Top = 7.559060000000000000
+          Width = 117.165430000000000000
+          Height = 37.795275590000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'KELAS')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo18: TfrxMemoView
+          Left = 574.488560000000000000
+          Top = 7.559060000000000000
+          Width = 192.756030000000000000
+          Height = 37.795275590000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'ALAMAT')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo7: TfrxMemoView
+          Left = 767.244590000000000000
+          Top = 7.559060000000000000
+          Width = 117.165430000000000000
+          Height = 37.795275590000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'NO. TELEPON')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object MasterData1: TfrxMasterData
+        Height = 37.795275590000000000
+        Top = 192.756030000000000000
+        Width = 980.410082000000000000
+        DataSet = frxdbanggota
+        DataSetName = 'frxdbanggota'
+        RowCount = 0
+        object Memo10: TfrxMemoView
+          Left = 94.488250000000000000
+          Width = 45.354360000000000000
+          Height = 37.795275590000000000
+          DataSet = frxdbanggota
+          DataSetName = 'frxdbanggota'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[line]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo11: TfrxMemoView
+          Left = 139.842610000000000000
+          Width = 71.811070000000000000
+          Height = 37.795275590000000000
+          DataField = 'id_anggota'
+          DataSet = frxdbanggota
+          DataSetName = 'frxdbanggota'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdbanggota."id_anggota"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo12: TfrxMemoView
+          Left = 211.653680000000000000
+          Width = 200.315090000000000000
+          Height = 37.795275590000000000
+          DataField = 'nama'
+          DataSet = frxdbanggota
+          DataSetName = 'frxdbanggota'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haBlock
+          Memo.UTF8 = (
+            '[frxdbanggota."nama"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo13: TfrxMemoView
+          Left = 411.968770000000000000
+          Width = 45.354360000000000000
+          Height = 37.795275590000000000
+          DataField = 'jk'
+          DataSet = frxdbanggota
+          DataSetName = 'frxdbanggota'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdbanggota."jk"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo14: TfrxMemoView
+          Left = 457.323130000000000000
+          Width = 117.165430000000000000
+          Height = 37.795275590000000000
+          DataField = 'kelas'
+          DataSet = frxdbanggota
+          DataSetName = 'frxdbanggota'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdbanggota."kelas"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo17: TfrxMemoView
+          Left = 574.488560000000000000
+          Width = 192.756030000000000000
+          Height = 37.795275590000000000
+          DataField = 'alamat'
+          DataSet = frxdbanggota
+          DataSetName = 'frxdbanggota'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haBlock
+          Memo.UTF8 = (
+            '[frxdbanggota."alamat"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo19: TfrxMemoView
+          Left = 767.244590000000000000
+          Width = 117.165430000000000000
+          Height = 37.795275590000000000
+          DataField = 'no_telp'
+          DataSet = frxdbanggota
+          DataSetName = 'frxdbanggota'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haBlock
+          Memo.UTF8 = (
+            '[frxdbanggota."no_telp"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object Footer1: TfrxFooter
+        Height = 45.354360000000000000
+        Top = 253.228510000000000000
+        Width = 980.410082000000000000
+        object Memo20: TfrxMemoView
+          Left = 718.110700000000000000
+          Top = 18.897650000000000000
+          Width = 158.740260000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'Jumlah Data Anggota :')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo21: TfrxMemoView
+          Left = 876.850960000000000000
+          Top = 18.897650000000000000
+          Width = 45.354360000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[COUNT(MasterData1)]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+    end
+  end
+  object frxdbanggota: TfrxDBDataset
+    UserName = 'frxdbanggota'
+    CloseDataSource = False
+    DataSet = zqry1
+    Left = 669
+    Top = 60
   end
 end

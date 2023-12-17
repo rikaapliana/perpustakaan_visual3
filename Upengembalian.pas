@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, StdCtrls, ZAbstractRODataset, ZAbstractDataset, ZDataset,
-  ZAbstractConnection, ZConnection, Grids, DBGrids, ComCtrls;
+  ZAbstractConnection, ZConnection, Grids, DBGrids, ComCtrls, frxClass,
+  frxDBSet;
 
 type
   TForm7 = class(TForm)
@@ -32,6 +33,9 @@ type
     intgrfldzqry1id_peminjaman: TIntegerField;
     strngfldzqry1denda: TStringField;
     strngfldzqry1keterangan: TStringField;
+    btn6: TButton;
+    frxpengembalian: TfrxReport;
+    frxdbpengembalian: TfrxDBDataset;
     procedure bersih;
     procedure enable;
     procedure posisiawal;
@@ -42,6 +46,7 @@ type
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -188,6 +193,11 @@ Cb1.Text:= zqry1.Fields[2].AsString;
 edt1.Text:= zqry1.Fields[3].AsString;
 edt2.Text:= zqry1.Fields[4].AsString;
 
+end;
+
+procedure TForm7.btn6Click(Sender: TObject);
+begin
+frxpengembalian.ShowReport(True);
 end;
 
 end.

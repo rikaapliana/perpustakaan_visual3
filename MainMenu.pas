@@ -25,6 +25,7 @@ type
     procedure D4Click(Sender: TObject);
     procedure D5Click(Sender: TObject);
     procedure D6Click(Sender: TObject);
+    procedure Close1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,5 +68,14 @@ procedure TForm2.D6Click(Sender: TObject);
 begin
 Form8.ShowModal;
 end;
+
+procedure TForm2.Close1Click(Sender: TObject);
+begin
+  if (Application.MessageBox('Apakah Anda Yakin Ingin Mengakhiri Program Ini?', 'CLOSE', MB_YesNo) = ID_Yes) then
+  begin
+    Application.Terminate;
+  end;
+end;
+
 
 end.

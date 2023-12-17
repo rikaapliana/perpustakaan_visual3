@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset,
-  ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids;
+  ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids, frxClass,
+  frxDBSet;
 
 type
   TForm4 = class(TForm)
@@ -38,6 +39,9 @@ type
     strngfldzqry1jabatan: TStringField;
     strngfldzqry1alamat: TStringField;
     strngfldzqry1no_telp: TStringField;
+    btn6: TButton;
+    frxpetugas: TfrxReport;
+    frxdbpetugas: TfrxDBDataset;
     procedure bersih;
     procedure posisiawal;
     procedure enable;
@@ -48,6 +52,7 @@ type
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -204,6 +209,11 @@ Cbjk.Text:= zqry1.Fields[3].AsString;
 edt3.Text:= zqry1.Fields[4].AsString;
 edt4.Text:= zqry1.Fields[5].AsString;
 edt5.Text:= zqry1.Fields[6].AsString;
+end;
+
+procedure TForm4.btn6Click(Sender: TObject);
+begin
+frxpetugas.ShowReport(True);
 end;
 
 end.

@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset,
-  ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids;
+  ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids, frxClass,
+  frxDBSet;
 
 type
   TForm5 = class(TForm)
@@ -38,6 +39,9 @@ type
     strngfldzqry1tahun_penerbit: TStringField;
     strngfldzqry1kategori: TStringField;
     edt6: TEdit;
+    btn6: TButton;
+    frxbuku: TfrxReport;
+    frxdbbuku: TfrxDBDataset;
     procedure bersih;
     procedure enable;
     procedure posisiawal;
@@ -48,6 +52,7 @@ type
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -207,6 +212,11 @@ edt3.Text:= zqry1.Fields[3].AsString;
 edt4.Text:= zqry1.Fields[4].AsString;
 edt5.Text:= zqry1.Fields[5].AsString;
 edt6.Text:= zqry1.Fields[6].AsString;
+end;
+
+procedure TForm5.btn6Click(Sender: TObject);
+begin
+frxbuku.ShowReport(True);
 end;
 
 end.

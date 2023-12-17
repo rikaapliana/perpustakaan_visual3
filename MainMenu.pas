@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus, StdCtrls, Uanggota, Upetugas, Ubuku, Upeminjaman, Upengembalian;
+  Dialogs, Menus, StdCtrls, Uanggota, Upetugas, Ubuku, Upeminjaman, Upengembalian, Udenda;
 
 type
   TForm2 = class(TForm)
@@ -24,6 +24,7 @@ type
     procedure D3Click(Sender: TObject);
     procedure D4Click(Sender: TObject);
     procedure D5Click(Sender: TObject);
+    procedure D6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,6 +61,11 @@ end;
 procedure TForm2.D5Click(Sender: TObject);
 begin
 Form7.ShowModal;
+end;
+
+procedure TForm2.D6Click(Sender: TObject);
+begin
+Form8.ShowModal;
 end;
 
 end.

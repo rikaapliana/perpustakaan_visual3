@@ -246,6 +246,14 @@ object Form6: TForm6
     Time = 45112.066510115740000000
     TabOrder = 10
   end
+  object Edit1: TEdit
+    Left = 728
+    Top = 504
+    Width = 121
+    Height = 21
+    TabOrder = 11
+    Text = 'Edit1'
+  end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False

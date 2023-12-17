@@ -35,6 +35,7 @@ type
     intgrfldzqry1id_buku: TIntegerField;
     intgrfldzqry1id_anggota: TIntegerField;
     intgrfldzqry1id_petugas: TIntegerField;
+    Edit1: TEdit;
     procedure enable;
     procedure posisiawal;
     procedure FormShow(Sender: TObject);

@@ -1,8 +1,8 @@
 object Form7: TForm7
   Left = 236
-  Top = 182
-  Width = 883
-  Height = 480
+  Top = 135
+  Width = 850
+  Height = 529
   Caption = 'Inputan Pengembalian'
   Color = clPurple
   Font.Charset = DEFAULT_CHARSET
@@ -117,6 +117,7 @@ object Form7: TForm7
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object btn1: TButton
     Left = 520
@@ -146,6 +147,7 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
     TabOrder = 4
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 520
@@ -160,6 +162,7 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 520
@@ -174,6 +177,7 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
     TabOrder = 6
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 520
@@ -188,6 +192,7 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
     TabOrder = 7
+    OnClick = btn5Click
   end
   object edt1: TEdit
     Left = 176
@@ -206,7 +211,7 @@ object Form7: TForm7
     Left = 176
     Top = 256
     Width = 233
-    Height = 25
+    Height = 26
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -15

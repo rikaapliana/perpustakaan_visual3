@@ -1,10 +1,10 @@
-object Form5: TForm5
-  Left = 355
-  Top = 270
+object Form8: TForm8
+  Left = 256
+  Top = 175
   Width = 850
-  Height = 559
-  Caption = 'Inputan Buku'
-  Color = clMaroon
+  Height = 480
+  Caption = 'Inputan Denda'
+  Color = clGreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -16,10 +16,10 @@ object Form5: TForm5
   TextHeight = 13
   object lbl1: TLabel
     Left = 32
-    Top = 104
-    Width = 72
+    Top = 112
+    Width = 124
     Height = 15
-    Caption = 'KODE BUKU'
+    Caption = 'NO. PENGEMBALIAN'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -29,10 +29,10 @@ object Form5: TForm5
   end
   object lbl2: TLabel
     Left = 32
-    Top = 144
-    Width = 76
+    Top = 152
+    Width = 105
     Height = 15
-    Caption = 'JUDUL BUKU'
+    Caption = 'TANGGAL DENDA'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -42,10 +42,10 @@ object Form5: TForm5
   end
   object lbl3: TLabel
     Left = 32
-    Top = 184
-    Width = 52
+    Top = 192
+    Width = 85
     Height = 15
-    Caption = 'PENULIS'
+    Caption = 'KETERANGAN'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -55,23 +55,10 @@ object Form5: TForm5
   end
   object lbl4: TLabel
     Left = 32
-    Top = 224
-    Width = 61
+    Top = 232
+    Width = 98
     Height = 15
-    Caption = 'PENERBIT'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWhite
-    Font.Height = -13
-    Font.Name = 'Times New Roman'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
-  object lbl6: TLabel
-    Left = 32
-    Top = 304
-    Width = 64
-    Height = 15
-    Caption = 'KATEGORI'
+    Caption = 'JUMLAH DENDA'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -81,10 +68,10 @@ object Form5: TForm5
   end
   object lbl5: TLabel
     Left = 32
-    Top = 264
-    Width = 90
+    Top = 272
+    Width = 136
     Height = 15
-    Caption = 'TAHUN TERBIT'
+    Caption = 'STATUS PEMBAYARAN'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -97,8 +84,10 @@ object Form5: TForm5
     Top = 40
     Width = 287
     Height = 38
-    Caption = 'SISTEM INFORMASI PERPUSTAKAAN'#13#10'                     INPUTAN BUKU'
-    Color = clMaroon
+    Caption = 
+      'SISTEM INFORMASI PERPUSTAKAAN'#13#10'                     INPUTAN DEND' +
+      'A'
+    Color = clGreen
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -16
@@ -119,10 +108,10 @@ object Form5: TForm5
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    OnCellClick = dbgrd1CellClick
+    OnDblClick = dbgrd1DblClick
   end
   object btn1: TButton
-    Left = 528
+    Left = 520
     Top = 104
     Width = 129
     Height = 31
@@ -137,7 +126,7 @@ object Form5: TForm5
     OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 528
+    Left = 520
     Top = 152
     Width = 129
     Height = 31
@@ -152,7 +141,7 @@ object Form5: TForm5
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 528
+    Left = 520
     Top = 200
     Width = 129
     Height = 31
@@ -167,7 +156,7 @@ object Form5: TForm5
     OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 528
+    Left = 520
     Top = 248
     Width = 129
     Height = 31
@@ -182,7 +171,7 @@ object Form5: TForm5
     OnClick = btn4Click
   end
   object btn5: TButton
-    Left = 528
+    Left = 520
     Top = 296
     Width = 129
     Height = 31
@@ -197,8 +186,8 @@ object Form5: TForm5
     OnClick = btn5Click
   end
   object edt1: TEdit
-    Left = 192
-    Top = 104
+    Left = 184
+    Top = 192
     Width = 233
     Height = 26
     Font.Charset = DEFAULT_CHARSET
@@ -210,8 +199,8 @@ object Form5: TForm5
     TabOrder = 6
   end
   object edt2: TEdit
-    Left = 192
-    Top = 144
+    Left = 184
+    Top = 232
     Width = 233
     Height = 26
     Font.Charset = DEFAULT_CHARSET
@@ -223,8 +212,8 @@ object Form5: TForm5
     TabOrder = 7
   end
   object edt3: TEdit
-    Left = 192
-    Top = 184
+    Left = 184
+    Top = 272
     Width = 233
     Height = 26
     Font.Charset = DEFAULT_CHARSET
@@ -235,38 +224,29 @@ object Form5: TForm5
     ParentFont = False
     TabOrder = 8
   end
-  object edt4: TEdit
-    Left = 192
-    Top = 224
-    Width = 233
-    Height = 26
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -15
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 9
-  end
-  object edt5: TEdit
-    Left = 192
-    Top = 264
-    Width = 233
-    Height = 26
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -15
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 10
-  end
-  object edt6: TEdit
-    Left = 192
-    Top = 304
-    Width = 233
+  object Cb1: TComboBox
+    Left = 184
+    Top = 112
+    Width = 177
     Height = 21
-    TabOrder = 11
+    ItemHeight = 13
+    TabOrder = 9
+    Text = 'pilih---'
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5')
+  end
+  object dtp1: TDateTimePicker
+    Left = 184
+    Top = 152
+    Width = 177
+    Height = 21
+    Date = 45112.066510115740000000
+    Time = 45112.066510115740000000
+    TabOrder = 10
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -288,42 +268,10 @@ object Form5: TForm5
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select * from buku')
+      'select * from denda')
     Params = <>
     Left = 696
     Top = 355
-    object intgrfldzqry1id_buku: TIntegerField
-      DisplayWidth = 5
-      FieldName = 'id_buku'
-      Required = True
-    end
-    object strngfldzqry1kode_buku: TStringField
-      FieldName = 'kode_buku'
-      Size = 10
-    end
-    object strngfldzqry1judul_buku: TStringField
-      DisplayWidth = 25
-      FieldName = 'judul_buku'
-      Size = 25
-    end
-    object strngfldzqry1penulis: TStringField
-      DisplayWidth = 20
-      FieldName = 'penulis'
-      Size = 25
-    end
-    object strngfldzqry1penerbit: TStringField
-      DisplayWidth = 18
-      FieldName = 'penerbit'
-      Size = 25
-    end
-    object strngfldzqry1tahun_penerbit: TStringField
-      FieldName = 'tahun_penerbit'
-      Size = 10
-    end
-    object strngfldzqry1kategori: TStringField
-      DisplayWidth = 25
-      FieldName = 'kategori'
-    end
   end
   object ds1: TDataSource
     DataSet = zqry1

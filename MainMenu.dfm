@@ -67,6 +67,7 @@ object Form2: TForm2
       end
       object D6: TMenuItem
         Caption = 'Inputan Denda'
+        OnClick = D6Click
       end
     end
     object Close1: TMenuItem

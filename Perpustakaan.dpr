@@ -8,7 +8,8 @@ uses
   Upetugas in 'Upetugas.pas' {Form4},
   Ubuku in 'Ubuku.pas' {Form5},
   Upeminjaman in 'Upeminjaman.pas' {Form6},
-  Upengembalian in 'Upengembalian.pas' {Form7};
+  Upengembalian in 'Upengembalian.pas' {Form7},
+  Udenda in 'Udenda.pas' {Form8};
 
 {$R *.res}
 
@@ -21,5 +22,6 @@ begin
   Application.CreateForm(TForm5, Form5);
   Application.CreateForm(TForm6, Form6);
   Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TForm8, Form8);
   Application.Run;
 end.
